@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/acessorio.dart';
+import '../../models/acessorio.dart';
+import '../screens/tela_teste_screen.dart';
 
 class CriacaoFofocaScreen extends StatefulWidget {
   const CriacaoFofocaScreen({super.key});
@@ -115,8 +116,9 @@ class _CriacaoFofocaScreenState extends State<CriacaoFofocaScreen> {
                             ),
                           ),
                           validator: (value) {
-                            if (value == null || value.isEmpty)
+                            if (value == null || value.isEmpty) {
                               return 'Insira o nome!';
+                            }
                             return null;
                           },
                         ),
@@ -256,11 +258,24 @@ class _CriacaoFofocaScreenState extends State<CriacaoFofocaScreen> {
                             ),
                             onPressed: () {
                               bool formOk = _formKey.currentState!.validate();
-                              if (!_corFoiEscolhida)
+                              if (!_corFoiEscolhida) {
                                 setState(() => _mostrarErroCor = true);
+                              }
 
                               if (formOk && _corFoiEscolhida) {
-                                print("Fofoca pronta para o oceano!");
+                                // Pega o nome que o usuário digitou no TextFormField (precisamos adicionar um controller ou salvar o valor)
+                                // Como o código original não salvava o nome, vamos mandar um genérico por enquanto
+                                // ou você pode adicionar um TextEditingController no TextFormField para pegar o nome real.
+
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder:
+                                        (context) => const TelaTesteScreen(
+                                          nomeFofoca: "Sua Foquinha",
+                                        ),
+                                  ),
+                                );
                               }
                             },
                             child: const Text('criar fofoca'),

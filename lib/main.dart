@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'criacao_fofoca_screen.dart';
+import 'screens/criacao_fofoca_screen.dart';
 
 void main() {
   runApp(const MyApp());
