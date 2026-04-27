@@ -47,7 +47,6 @@ class _TelaInicialScreenState extends State<TelaInicialScreen> {
                   border: Border.all(color: const Color(0xFF003E8A), width: 4),
                   boxShadow: [
                     BoxShadow(
-                      // Correção: .withValues(alpha: 0.15) em vez de .withOpacity
                       color: Colors.black.withValues(alpha: 0.15),
                       blurRadius: 12,
                       offset: const Offset(0, 6),
@@ -61,7 +60,7 @@ class _TelaInicialScreenState extends State<TelaInicialScreen> {
                     Positioned(top: 160, left: -10, child: IgnorePointer(child: Image.asset('assets/elementos/peixinhos.png', width: 150))),
                     Positioned(top: 200, right: 15, child: IgnorePointer(child: Image.asset('assets/elementos/peixinhos.png', width: 150))),
                     
-                    // Foca centralizada (ajuste a escala se necessário)
+                    // Foca centralizada 
                     Positioned(
                       top: -60,
                       left: -80, 
@@ -132,7 +131,6 @@ class _TelaInicialScreenState extends State<TelaInicialScreen> {
     );
   }
 
-  // Métodos auxiliares para limpar o código
   Widget _buildLabel(String text) => Text(text, style: const TextStyle(color: Color(0xFF003E8A), fontSize: 16, fontWeight: FontWeight.bold));
 
   Widget _buildTextField(TextEditingController controller, String hint, {bool obscure = false}) {
