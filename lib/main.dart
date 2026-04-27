@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/criacao_fofoca_screen.dart';
+import 'screens/tela_inicial_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const CriacaoFofocaScreen(),
+      home: const TelaInicialScreen(),
     );
   }
 }

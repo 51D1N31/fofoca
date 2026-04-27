@@ -64,6 +64,7 @@ flutter:
     - assets/fundo.png
     - assets/fofoca_texto.png
     - assets/acessorios/
+    - assets/elementos/
 
   fonts:
     - family: ArcadeFont
