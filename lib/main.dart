@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/tela_inicial_screen.dart';
+import 'screens/boas_vindas.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const TelaInicialScreen(),
+      home: const BoasVindasScreen(),
     );
   }
 }
